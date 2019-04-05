@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master"  CodeFile="attendance.aspx.cs" Inherits="attendance" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master"  CodeFile="~/attendance.aspx.cs" Inherits="attendance" %>
 
 
 <asp:Content ContentPlaceHolderID="c1" runat="server">
@@ -80,8 +80,8 @@
              
              
              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <%--<input type ="submit" class="myButton" value="Get Attendance" runat ="server" onserverclick="get_attendance">--%>
-            <asp:Button ID ="b1" CssClass="myButton" runat="server" Text="Get Attendance" onclick="b1_Click" />
+
+              <asp:Button ID ="b1" CssClass="myButton" runat="server" Text="Get Results" onclick="get_attendance" /> 
             </div>
             
             </ul><br />
@@ -100,31 +100,6 @@
 
             
         </asp:Table>
-
-<%--
-<table  id="tblattendance" runat="server">
- 
-
- <tr>
-    <th>Month </th>
-    <th>JAVA</th>
-    <th>ADBMS</th>
-    <th>WEB</th>
-    <th>CG</th>
-    <th>TOC</th>
-   
-  </tr>
-  <tr>
-    <th><asp:Label ID="month" runat="server" /></th>
-    <td> </td>
-    <td><asp:Label ID="Label2" runat="server" /></td>
-    <td><asp:Label ID="Label3" runat="server" /></td>
-    <td><asp:Label ID="Label4" runat="server" /></td>
-    <td><asp:Label ID="Label5" runat="server" /></td>
-  </tr>
-
-
- </table>--%>
   </div>
 
   </section>

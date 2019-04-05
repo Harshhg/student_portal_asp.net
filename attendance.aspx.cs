@@ -18,8 +18,9 @@ public partial class attendance: System.Web.UI.Page
         }
     }
   
-    protected void b1_Click(object sender, EventArgs e)
+    protected void get_attendance(object sender, EventArgs e)
     {
+        
         String sub1="", sub2="", sub3="", sub4="", sub5="";
         String sem = semlist.SelectedValue;
         String year = yearlist.SelectedValue;
@@ -70,12 +71,12 @@ public partial class attendance: System.Web.UI.Page
             thr.Cells.Add(thcs5);
             
             tbl_attend.Rows.Add(thr);
-
+            
             while (rd.Read())
             {
                 
                 TableRow tr = new TableRow();
-                TableCell month = new TableCell();
+                TableHeaderCell month = new TableHeaderCell();
                 month.Text = rd["month"].ToString();
                 tr.Cells.Add(month);
 
