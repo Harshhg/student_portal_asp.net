@@ -147,7 +147,7 @@ public partial class results : System.Web.UI.Page
      
              
             }
-
+        con.Close();
         }
         catch (Exception ae)
         {

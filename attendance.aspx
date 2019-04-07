@@ -14,7 +14,7 @@
 	background:-o-linear-gradient(top, #fafafa 5%, #daeff1 100%);
 	background:-ms-linear-gradient(top, #fafafa 5%, #daeff1 100%);
 	background:linear-gradient(to bottom, #fafafa 5%, #daeff1 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#daeff1',GradientType=0);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa'WWWW, endColorstr='#daeff1',GradientType=0);
 	background-color:#fafafa;
 	-moz-border-radius:6px;
 	-webkit-border-radius:6px;
@@ -81,7 +81,7 @@
              
              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-              <asp:Button ID ="b1" CssClass="myButton" runat="server" Text="Get Results" onclick="get_attendance" /> 
+              <asp:Button ID ="b1" CssClass="myButton" runat="server" Text="Get Attendance" onclick="get_attendance" /> 
             </div>
             
             </ul><br />

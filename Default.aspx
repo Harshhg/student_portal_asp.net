@@ -18,12 +18,6 @@
              <h3>Attendance </h3>
                 </blockquote>
           </li></a>
-          <a href="examination.aspx">
-           <li><img src="images/examination.jpg" height="140" width="150">
-            <blockquote>
-             <h3>Examinations</h3>
-                </blockquote>
-          </li></a>
           <a href="results.aspx">
  <li><img src="images/results.jpg" height="140" width="150">
             <blockquote>
@@ -31,6 +25,15 @@
                 </blockquote>
           </li></a>
 
+         
+         
+          <a href="publicposts.aspx">
+           <li><img src="images/posts.jpg" height="140" width="150">
+            <blockquote>
+             <h3 align="center">    Public Posts</h3>
+                </blockquote>
+          </li></a>
+         
 
 
         </ul>

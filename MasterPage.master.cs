@@ -21,7 +21,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
         {
             String strcon = System.Configuration.ConfigurationManager.ConnectionStrings["studentdbconnectionstring"].ConnectionString.ToString();
             OdbcConnection con = new OdbcConnection(strcon);
-            OdbcCommand cmd = new OdbcCommand("Select * from student_details where  rollno = " + rollno + " ", con);
+            OdbcCommand cmd = new OdbcCommand("Select * from student_details where  rollno = '" + rollno + "' ", con);
 
             con.Open();
             OdbcDataReader rd = cmd.ExecuteReader();

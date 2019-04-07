@@ -102,6 +102,7 @@ public partial class attendance: System.Web.UI.Page
 
                 tbl_attend.Rows.Add(tr);
             }
+            con.Close();
 
         }
         catch (Exception ae)
