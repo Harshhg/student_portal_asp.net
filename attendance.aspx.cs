@@ -9,6 +9,7 @@ using System.Data.Odbc;
 public partial class attendance: System.Web.UI.Page
 {
     String rollno;
+    int minimumpercentage = 75;
     protected void Page_Load(object sender, EventArgs e)
     {
         rollno = Convert.ToString(Session["user"]);
@@ -81,29 +82,34 @@ public partial class attendance: System.Web.UI.Page
                 tr.Cells.Add(month);
 
                 TableCell s1 = new TableCell();
-                s1.Text = rd["s1"].ToString();
+                s1.Text = rd["s1"].ToString()+" %";
+                if (Convert.ToInt32(rd["s1"]) < minimumpercentage) { s1.ForeColor = System.Drawing.Color.Red; }
                 tr.Cells.Add(s1);
 
                 TableCell s2 = new TableCell();
-                s2.Text = rd["s2"].ToString();
+                s2.Text = rd["s2"].ToString()+" %";
+                if (Convert.ToInt32(rd["s2"]) < minimumpercentage) { s2.ForeColor = System.Drawing.Color.Red; }
                 tr.Cells.Add(s2);
 
                 TableCell s3 = new TableCell();
-                s3.Text = rd["s3"].ToString();
+                s3.Text = rd["s3"].ToString() + " %";
+                if (Convert.ToInt32(rd["s3"]) < minimumpercentage) { s3.ForeColor = System.Drawing.Color.Red; }
                 tr.Cells.Add(s3);
 
                 TableCell s4 = new TableCell();
-                s4.Text = rd["s4"].ToString();
+                s4.Text = rd["s4"].ToString() + " %";
+                if (Convert.ToInt32(rd["s4"]) < minimumpercentage) { s4.ForeColor = System.Drawing.Color.Red; }
                 tr.Cells.Add(s4);
 
                 TableCell s5 = new TableCell();
-                s5.Text = rd["s5"].ToString();
+                s5.Text = rd["s5"].ToString() + " %";
+                if (Convert.ToInt32(rd["s5"]) < minimumpercentage) { s5.ForeColor = System.Drawing.Color.Red; }
                 tr.Cells.Add(s5);
 
                 tbl_attend.Rows.Add(tr);
             }
             con.Close();
-
+                
         }
         catch (Exception ae)
         {
