@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Student's Site</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/stylewallet.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/profilephoto.css" type="text/css" media="all">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+ <link rel="stylesheet" href="css/tablestyle.css">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js" ></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/cufon-replace.js"></script>
+<script type="text/javascript" src="js/Myriad_Pro_300.font.js"></script>
+<script type="text/javascript" src="js/Myriad_Pro_400.font.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<!--[if lt IE 7]>
+<link rel="stylesheet" href="css/ie6.css" type="text/css" media="screen">
+<script type="text/javascript" src="js/ie_png.js"></script>
+<script type="text/javascript">ie_png.fix('.png, footer, header nav ul li a, .nav-bg, .list li img');</script>
+<![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5.js"></script><![endif]-->
+
+</head>
+
+
+  
+<body id="page1">
+<!-- START PAGE SOURCE -->
+<div class="wrap">
+  <header>
+    <div class="container">
+      <%--<h1><a href="#">Student's site</a></h1>--%>
+      <nav>
+        <ul>
+          <li class="current"><a href="Default.aspx" class="m1">Home Page</a></li>
+          <li><a href="inbox.aspx" class="m2">Inbox</a></li>
+          <li><a href="sentmail.aspx" class="m3">Sent Mail</a></li>
+          <li><a href="groupsentmail.aspx" class="m4">Group Sent</a></li>
+          <li class="last"><a href="login.aspx"  class="m5"  >Logout</a></li>
+        </ul>
+      </nav>
+	 
+
+     
+
+	  
+	<%--  
+      <form action="#" id="search-form">
+         
+          <div class="rowElem">
+              <font style="color :  #000; font-size: 20px; font-family: monospace ; margin-bottom: 6px; background: url(images/divider1.gif) repeat-x left bottom;  ">  
+                  Welcome </font>
+                  <font style="color :  #990099; font-size: 20px;font-family: monospace ;  margin-bottom: 6px; background: url(images/divider1.gif) repeat-x left bottom; ">  </font> 
+                            
+                  
+          </div>
+      
+      </form>--%>
+    </div>
+  </header>
+  <div class="container" >
+    
+  
+ <form runat="server">
+   
+  <asp:ContentPlaceHolder ID = "c1" runat="server">
+  
+  
+  </asp:ContentPlaceHolder>
+  </form>
+
+
+
+  
+  </div>
+</div>
+<footer>
+  <div class="footerlink">
+    <p class="lf">Copyright &copy; 2018 <a href="index.php">Student's Site</a> - All Rights Reserved</p>
+   <p class="rf">Developed by <a href="http://www.harsh-gupta.tk" target="blank">Harsh Gupta</a></p>
+    <div style="clear:both;"></div>
+  </div>
+</footer>
+<script type="text/javascript">    Cufon.now(); </script>
+<!-- END PAGE SOURCE -->
+
+</body>
+</html>

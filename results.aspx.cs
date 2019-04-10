@@ -9,6 +9,7 @@ using System.Data.Odbc;
 public partial class results : System.Web.UI.Page
 {
     String rollno;
+    int minimumpercentage = 40;
     protected void Page_Load(object sender, EventArgs e)
     {
         rollno = Convert.ToString(Session["user"]);
@@ -97,26 +98,31 @@ public partial class results : System.Web.UI.Page
                 while (count < 5)       //for 5 subjects
                 {
                     TableHeaderRow thr = new TableHeaderRow();
+                    
                     TableHeaderCell sub = new TableHeaderCell();
                     sub.Text = sub_array[count];        //column for subject name
                     thr.Cells.Add(sub);
 
                     TableCell omc = new TableCell();
+                    if (per[count] < minimumpercentage) { omc.ForeColor = System.Drawing.Color.Red; }
                     omc.Text = om[count].ToString();    // column for obtained marks of each subject
                     thr.Cells.Add(omc);
 
                     TableCell tmc = new TableCell();
+                    if (per[count] < minimumpercentage) { tmc.ForeColor = System.Drawing.Color.Red; }
                     tmc.Text = total.ToString();    //column for total marks of each subject
                     thr.Cells.Add(tmc);
 
                     TableCell perc = new TableCell();
+                    if (per[count] < minimumpercentage) { perc.ForeColor = System.Drawing.Color.Red; }
                     perc.Text = per[count].ToString()+" %";   //column for percentage of each subject
                     thr.Cells.Add(perc);
 
                     TableCell statusc = new TableCell();
+                    if (per[count] < minimumpercentage) { statusc.ForeColor = System.Drawing.Color.Red; }
                     statusc.Text = status[count].ToString();    //column for status of each subject
                     thr.Cells.Add(statusc);
-
+                    
                     tbl_results.Rows.Add(thr);      //adding 1 row for 1 subject
 
                     count++;
@@ -127,18 +133,22 @@ public partial class results : System.Web.UI.Page
                 tfr.Cells.Add(cell1);
 
                 TableHeaderCell tomc = new TableHeaderCell();
+                if (total_per < minimumpercentage) { tomc.ForeColor = System.Drawing.Color.Red; }
                 tomc.Text = total_om.ToString();    //column for total obtained marks
                 tfr.Cells.Add(tomc);
 
                 TableHeaderCell ttmc = new TableHeaderCell();
+                if (total_per < minimumpercentage) { ttmc.ForeColor = System.Drawing.Color.Red; }
                 ttmc.Text = total_marks.ToString();  //column for final total marks
                 tfr.Cells.Add(ttmc);
 
                 TableHeaderCell tperc = new TableHeaderCell();
+                if (total_per < minimumpercentage) { tperc.ForeColor = System.Drawing.Color.Red; }
                 tperc.Text = total_per.ToString()+" %";   //column for total percentage
                 tfr.Cells.Add(tperc);
 
                 TableHeaderCell tstatusc = new TableHeaderCell();
+                if (total_per < minimumpercentage) { tstatusc.ForeColor = System.Drawing.Color.Red; }
                 tstatusc.Text = total_status;       //column for final status
                 tfr.Cells.Add(tstatusc);
 
