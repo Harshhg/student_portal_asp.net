@@ -9,7 +9,7 @@ using System.Data.Odbc;
 public partial class attendance: System.Web.UI.Page
 {
     String rollno;
-    int minimumpercentage = 75;
+    Int32 minimumpercentage = 75;
     protected void Page_Load(object sender, EventArgs e)
     {
         rollno = Convert.ToString(Session["user"]);
@@ -32,7 +32,7 @@ public partial class attendance: System.Web.UI.Page
             String strcon = System.Configuration.ConfigurationManager.ConnectionStrings["studentdbconnectionstring"].ConnectionString.ToString();
             OdbcConnection con = new OdbcConnection(strcon);
             OdbcCommand get_subjects = new OdbcCommand("Select * from " + table + " where  rollno ='0' ", con);
-            OdbcCommand cmd = new OdbcCommand("Select * from " + table + " where  rollno ='" + rollno + "' and year='" + year + "' ", con);
+            OdbcCommand cmd = new OdbcCommand("Select * from " + table + " where  rollno ='" + rollno + "' and year='" + year + "' order by id asc ", con);
             con.Open();
             OdbcDataReader subject = get_subjects.ExecuteReader();
             OdbcDataReader rd = cmd.ExecuteReader();
@@ -113,7 +113,7 @@ public partial class attendance: System.Web.UI.Page
         }
         catch (Exception ae)
         {
-            Response.Write(ae);
+            
            //Response.Write("<script>alert('Data Not Found')</script>");
         }
 

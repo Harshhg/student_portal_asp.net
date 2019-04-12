@@ -9,7 +9,7 @@ using System.Data.Odbc;
 public partial class MasterPage : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
-    {
+    { 
         Int32 rollno = Convert.ToInt32(Session["user"]);
 
         if (Session["user"] == null)
@@ -37,6 +37,8 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
 
 
+
+
         }
         catch (Exception ae)
         {
@@ -46,3 +48,4 @@ public partial class MasterPage : System.Web.UI.MasterPage
     }
 
 }
+ 

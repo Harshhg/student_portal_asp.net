@@ -13,6 +13,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
  <link rel="stylesheet" href="css/tablestyle.css">
+ <link rel="stylesheet" href="css/leaderboard.css">
 <script type="text/javascript" src="js/jquery-1.4.2.min.js" ></script>
 <script type="text/javascript" src="js/cufon-yui.js"></script>
 <script type="text/javascript" src="js/cufon-replace.js"></script>
@@ -64,16 +65,17 @@
       </form>--%>
     </div>
   </header>
-  <div class="container">
-    <aside>
-
-
     <form runat="server">
+  <div class="container">
+   
+    <aside>
+     
+
     <asp:TextBox ID="hidden" Visible=false runat="server" Text = ""  />
 
 <div class="twPc-div">
     <a class="twPc-bg twPc-block"></a>
-
+    
 	<div>
 		
 
@@ -122,38 +124,41 @@
      
      
      
-     
-     
-     
-     
-        <div><marquee behavior=" "><h3 style="color:green">
-                   
-               
-               </h3></marquee></div>
-      <h3>Categories</h3>
-      <ul class="categories">
-        <li><span><a href="sendmailto.aspx"  id = " "> Compose </a></span></li>
-		<li><span><a href="inbox.aspx">Inbox 
+      <br />
+      <asp:Panel ID="home_category" runat="server">
+             <h3>Categories</h3>
+            <ul class="categories">
+                    <li><span><a href="sendmailto.aspx"  id = " "> Compose </a></span></li>
+		            <li><span><a href="inbox.aspx">Inbox 
 		
-		
-		
-		</a></span></li>
-        <li><span><a href="#">Starred</a></span></li>
-        <li><span><a href="#">Draft</a></span></li>
-        <li><span><a href="sentmail.aspx">Sent Mail
-		
-		
-		
-		</a></span></li>
-        <li><span><a href="groupsentmail.php">Group Sent 
-		
-		
-		
-		</a></span></li>
-         
-      </ul>
-       
-      
+		            </a></span></li>
+                    <li><span><a href="#">Starred</a></span></li>
+                    <li><span><a href="#">Draft</a></span></li>
+                    <li><span><a href="sentmail.aspx">Sent Mail
+				
+		            </a></span></li>
+                    <li><span><a href="groupsentmail.php">Group Sent 
+		            </a></span></li>
+            </ul><br /><br />
+     </asp:Panel>
+
+
+      <asp:Panel id ="panel_leader" runat="server" Visible=false>
+      <br /><br />
+                  <div class="leaderboard" style="font-size:10px"> 
+   		        <div class="lbheader"><asp:Label ID ="leaderboard_title" runat="server" Text = ""></asp:Label></div>
+  
+                <asp:Table CssClass="lb" runat="server" ID="tbl_leaderboard">
+                </asp:Table>
+   
+                    </div>
+      </asp:Panel>
+
+      <asp:Panel ID = "panel_gif" runat="server" Visible="false">
+            <img src = "images/dance.gif" height=30px width=30px/>
+      </asp:Panel>
+
+
     </aside>
   
 

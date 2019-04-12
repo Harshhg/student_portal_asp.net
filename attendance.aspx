@@ -54,7 +54,7 @@
   	<div class="inside">
     
     
-  <ul class="listcompose"><br> <br>
+  <ul class="listcompose"> 
      <div class="field">
      
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
@@ -84,7 +84,8 @@
               <asp:Button ID ="b1" CssClass="myButton" runat="server" Text="Get Attendance" onclick="get_attendance" /> 
             </div>
             
-            </ul><br />
+            </ul> 
+            <div class="table-users"> 
     <div class = "scrollit">
 
 
@@ -101,7 +102,7 @@
             
         </asp:Table>
   </div>
-
+  </div>
   </section>
   </div>
    </asp:Content>

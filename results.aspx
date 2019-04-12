@@ -52,7 +52,7 @@
        
       <div class="inside"> 
          
-           <ul class="listcompose"><br> <br>
+           <ul class="listcompose"> 
      <div class="field">
      
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
@@ -82,15 +82,15 @@
             <asp:Button ID ="b1" CssClass="myButton" runat="server" Text="Get Results" onclick="get_results" /> 
              </div>
             
-            </ul><br />
+            </ul> 
 
 
 
 
 
  
-  	  <div classs="table-users"> 
-   		<div class="header">CIA - I</div>
+  	  <div class="table-users"> 
+   		<div class="header">Internals</div>
  <div class ="scrollit1">
   <asp:Table ID="tbl_results" runat="server"   Width="100%" cssclass = "responstable" > 
   <asp:TableHeaderRow ID = "th1" runat="server">

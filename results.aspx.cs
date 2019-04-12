@@ -10,17 +10,34 @@ public partial class results : System.Web.UI.Page
 {
     String rollno;
     int minimumpercentage = 40;
+    Panel phome;
+    Panel pleader;
+    Panel pgif;
+    int toprankers = 5;
     protected void Page_Load(object sender, EventArgs e)
     {
+        phome =  (Panel)Master.FindControl("home_category");
+        pleader = (Panel)Master.FindControl("panel_leader");
+        pgif = (Panel)Master.FindControl("panel_gif");
+        phome.Visible=false;
+        pgif.Visible = true;
+
         rollno = Convert.ToString(Session["user"]);
         if (Session["user"] == null)
         {
             Response.Redirect("login.aspx");
         }
+
+        
+
     }
 
     protected void get_results(object sender, EventArgs e)
     {
+        Table t_lb = (Table)FindControlRecursive(Master, "tbl_leaderboard");
+        Label leaderboard_title = (Label)Master.FindControl("leaderboard_title");
+        pleader.Visible = true;
+        pgif.Visible = false;
         int count=0;
         String sem = semlist.SelectedValue;
         String year = yearlist.SelectedValue;
@@ -157,11 +174,54 @@ public partial class results : System.Web.UI.Page
      
              
             }
+
+         //to get subjects list only
+            //FOR LEADERBOARD
+        OdbcCommand lb = new OdbcCommand("Select * from leaderboard where  semester ='" + sem + "' and year='" + year + "' order by percentage desc ", con);  //to get ranks by percentage
+        OdbcDataReader lbr = lb.ExecuteReader();
+        int rank = 1;
+        while (lbr.Read())
+        {
+            if (rank > toprankers)
+                break;
+            Image img = new Image();
+            String imgurl = "userimage/";
+            String name = "";
+            OdbcCommand get_name = new OdbcCommand("Select * from student_details where  rollno ='" + lbr["rollno"].ToString() + "' ", con);  //to get ranks by percentage
+            OdbcDataReader namerd = get_name.ExecuteReader();
+            while (namerd.Read())
+            {
+                name = namerd["name"].ToString();
+                imgurl += namerd["photo"].ToString();
+            }
+            
+            TableRow row = new TableRow();
+            TableCell cell1 = new TableCell();
+            img.CssClass = "lbimg";
+            img.ImageUrl = imgurl;
+            cell1.Controls.Add(img);
+            row.Cells.Add(cell1);
+
+            TableCell cell2 = new TableCell();
+            cell2.Text = name;
+            row.Cells.Add(cell2);
+
+            TableCell cell3 = new TableCell();
+            cell3.Text =  lbr["percentage"].ToString()+" %";
+            row.Cells.Add(cell3);
+
+            rank++;
+            t_lb.Rows.Add(row);
+            
+        }
+
+            leaderboard_title.Text="Top Rankers (MCA - "+sem+" )";
+
         con.Close();
         }
         catch (Exception ae)
         {
-          
+            Response.Write(ae);
           Response.Write("<script>alert('Please Try Later')</script>");
         }
 
@@ -174,4 +234,16 @@ public partial class results : System.Web.UI.Page
 
 
 
+
+    private Control FindControlRecursive(Control rootControl, string controlID)
+    {
+        if (rootControl.ID == controlID) return rootControl;
+
+        foreach (Control controlToSearch in rootControl.Controls)
+        {
+            Control controlToReturn = FindControlRecursive(controlToSearch, controlID);
+            if (controlToReturn != null) return controlToReturn;
+        }
+        return null;
+    }
 }
