@@ -8,11 +8,11 @@
 .twPc-bg {
     background-image: url("../images/userbadge.jpg");
     background-position: 0 50%;
-    
+     
     border-bottom: 1px solid #e1e8ed;
     border-radius: 4px 4px 0 0;
     height: 95px;
-    width: 100%;
+    width: 200%;
 }
 .twPc-block {
     display: block !important;

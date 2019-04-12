@@ -26,7 +26,7 @@ html, body {
 }
 .container {
 	margin:0 auto;
-	width:940px;
+	width:1000px;
 	overflow:hidden;
 	font-size:.875em;
 	padding-bottom:176px;
@@ -42,11 +42,11 @@ header .container {
 }
 section#content {
 	float:left;
-	width:80%;
+	 
         
 }
 aside {
-	width:150px;
+	width:200px;
 	float:left;
 	margin-right:30px;
 	padding:5px 0 0 0;
