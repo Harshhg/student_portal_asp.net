@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/MasterPage.master"  CodeFile="~/admin/attendance.aspx.cs" Inherits="attendance" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/MasterPage.master"  CodeFile="~/admin/results.aspx.cs" Inherits="attendance" %>
 
 
 <asp:Content ContentPlaceHolderID="c1" runat="server">
@@ -78,21 +78,7 @@
                 <asp:ListItem Value="2020" Text="2020"></asp:ListItem>
             </asp:DropDownList>
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
-              <label>Select Month:</label>
-             <asp:DropDownList ID="monthlist" runat="server">
-                <asp:ListItem Value="January" Text="January"></asp:ListItem>
-                <asp:ListItem Value="February" Text="February"></asp:ListItem>  
-                <asp:ListItem Value="March" Text="March"></asp:ListItem>
-                 <asp:ListItem Value="April" Text="April"></asp:ListItem>
-                <asp:ListItem Value="May" Text="May"></asp:ListItem>
-                <asp:ListItem Value="June" Text="June"></asp:ListItem>
-                <asp:ListItem Value="July" Text="July"></asp:ListItem>
-                <asp:ListItem Value="August" Text="August"></asp:ListItem>  
-                <asp:ListItem Value="September" Text="September"></asp:ListItem>
-                <asp:ListItem Value="October" Text="October"></asp:ListItem>
-                <asp:ListItem Value="November" Text="November"></asp:ListItem>
-                <asp:ListItem Value="December" Text="December"></asp:ListItem>
-            </asp:DropDownList>
+             
               &nbsp;&nbsp;&nbsp;&nbsp;
             
               <asp:Button ID ="b1" CssClass="myButton" runat="server" Text="Fetch" onclick="fetch" /> 
@@ -105,15 +91,15 @@
   <asp:Table ID="table1" runat="server"   Width="100%" class = "responstable" >
                 <asp:TableHeaderRow id ="th1" runat="server">
                  <asp:TableHeaderCell ID="TableCell10" runat="server">Subjects</asp:TableHeaderCell>
-                <asp:TableHeaderCell ID="TableCell11" runat="server">Present</asp:TableHeaderCell>
-                <asp:TableHeaderCell ID="TableCell12" runat="server">Total</asp:TableHeaderCell>
+                <asp:TableHeaderCell ID="TableCell11" runat="server">Obtained Marks</asp:TableHeaderCell>
+                <asp:TableHeaderCell ID="TableCell12" runat="server">Total Marks</asp:TableHeaderCell>
                 </asp:TableHeaderRow>
 </asp:Table>
 <asp:Table ID="tbl_attend" runat="server"   Width="100%" class = "responstable" >
                 <asp:TableHeaderRow id ="TableHeaderRow1" runat="server">
                  <asp:TableHeaderCell ID="TableHeaderCell1" runat="server">Subjects</asp:TableHeaderCell>
-                <asp:TableHeaderCell ID="TableHeaderCell2" runat="server">Present</asp:TableHeaderCell>
-                <asp:TableHeaderCell ID="TableHeaderCell3" runat="server">Total</asp:TableHeaderCell>
+                <asp:TableHeaderCell ID="TableHeaderCell2" runat="server">Obtained Marks</asp:TableHeaderCell>
+                <asp:TableHeaderCell ID="TableHeaderCell3" runat="server">Total Marks</asp:TableHeaderCell>
                 </asp:TableHeaderRow>
                 
                 <asp:TableRow>
@@ -153,7 +139,7 @@
   <br />
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:label ID= "label" runat="server" Text="Enter Roll No: "> </asp:label>
  <asp:TextBox ID ="roll" runat="server"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
-    <div style="float:right"><asp:Button ID ="submit"  CssClass="myButton" runat="server" Text="Submit Attendance" onclick="submit_attendance" autopostback = false /> </div> <br />
+    <div style="float:right"><asp:Button ID ="submit"  CssClass="myButton" runat="server" Text="Submit Result" onclick="submit_result" autopostback = false /> </div> <br />
  </div> 
   </section>
   </div>
