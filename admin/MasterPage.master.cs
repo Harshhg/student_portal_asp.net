@@ -10,11 +10,11 @@ public partial class MasterPage : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        Int32 rollno = Convert.ToInt32(Session["user"]);
+        Int32 rollno = Convert.ToInt32(Session["admin"]);
 
-        if (Session["user"] == null)
+        if (Session["admin"] == null)
         {   
-            //Response.Redirect("login.aspx");
+          //Response.Redirect("~/admin/admin_login.aspx");
         }
 
          

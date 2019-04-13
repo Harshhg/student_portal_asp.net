@@ -42,7 +42,7 @@
           <li><a href="inbox.aspx" class="m2">Inbox</a></li>
           <li><a href="sentmail.aspx" class="m3">Sent Mail</a></li>
           <li><a href="groupsentmail.aspx" class="m4">Group Sent</a></li>
-          <li class="last"><a href="login.aspx"  class="m5"  >Logout</a></li>
+          <li class="last"><a href="admin_login.aspx"  class="m5"  >Logout</a></li>
         </ul>
       </nav>
 	 
