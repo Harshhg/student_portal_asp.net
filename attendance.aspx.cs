@@ -20,7 +20,7 @@ public partial class attendance: System.Web.UI.Page
     }
   
     protected void get_attendance(object sender, EventArgs e)
-    {
+    {       
         
         String sub1="", sub2="", sub3="", sub4="", sub5="";
         String sem = semlist.SelectedValue;

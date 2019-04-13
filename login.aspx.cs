@@ -29,6 +29,10 @@ public partial class login : System.Web.UI.Page
 
     }
 
+    protected void login_redirect(object sender, EventArgs e)
+    {
+        Response.Redirect("/admin/admin_login.aspx");
+    }
 
 
 
@@ -60,7 +64,7 @@ public partial class login : System.Web.UI.Page
                         alert.ForeColor = System.Drawing.Color.Red;
                         alert.Text = "Invalid Username or Password";
                     }
-                
+                    con.Close();
 
 
 

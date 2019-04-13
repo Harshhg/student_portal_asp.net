@@ -17,7 +17,7 @@
 <body>
 	<!---728x90--->
 
-	<h1>Student Login Form</h1>
+	<asp:HyperLink  id= "l1" runat= "server" NavigateUrl="~/admin/admin_login.aspx"><h1>Student Login </h1></asp:HyperLink>
 	<!---728x90--->
 
 	<div class="w3ls-login box">

@@ -62,7 +62,7 @@ public partial class login : System.Web.UI.Page
                 }
                 OdbcCommand cmd1 = new OdbcCommand("INSERT INTO login(id,rollno,email,password)values('" + id + "', '"+rollno+"','" + email + "', '" + pass + "')", con);
                 cmd1.ExecuteNonQuery();
-
+                con.Close();
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Successfully Registered !')", true);
                }
         }

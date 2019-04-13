@@ -6,8 +6,7 @@
 <section id="content">
        
       <div class="inside"> 
-         $
-        
+
           <div class="table-users">
    		<div class="header">Choose Category </div>
                 

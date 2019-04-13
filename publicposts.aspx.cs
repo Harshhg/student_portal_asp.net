@@ -98,8 +98,8 @@ public partial class publicposts : System.Web.UI.Page
                     Response.Write("<script>alert('Please Try Later..')</script>");
                 }
 
-                
-               
+
+                con.Close();
             }
 
         }

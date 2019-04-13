@@ -15,8 +15,19 @@
           <div class="table-users"> 
    		<div class="header">Primary Mail</div>
  <div class ="scrollit">
- 
-   <table cellspacing="0">  
+  <asp:Table ID="tbl_inbox" runat="server"   Width="100%" cssclass = "responstable" > 
+  <asp:TableHeaderRow ID = "th1" runat="server">
+  <asp:TableHeaderCell>Photo</asp:TableHeaderCell>
+  <asp:TableHeaderCell>Name</asp:TableHeaderCell>
+  <asp:TableHeaderCell>Email</asp:TableHeaderCell>
+<asp:TableHeaderCell>Date</asp:TableHeaderCell>
+<asp:TableHeaderCell>Subject</asp:TableHeaderCell>
+<asp:TableHeaderCell>Message</asp:TableHeaderCell>
+<asp:TableHeaderCell></asp:TableHeaderCell>
+  </asp:TableHeaderRow>
+ </asp:Table>
+  
+   <%--<table cellspacing="0">  
       <tr>
          <th><b>Picture</b> </th>
          <th><b>Name</b></th>
@@ -37,11 +48,7 @@
             <td> <a href = "#abc" >View Mail </a></td> 
          <td><input type ="checkbox" name ="c1[]" value="" </td>
        </tr>
- 
-
-     
-   
-   </table> 
+ </table> --%>
      
 	</form> 
    </div>

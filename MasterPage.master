@@ -65,7 +65,7 @@
       </form>--%>
     </div>
   </header>
-    <form runat="server">
+    <form runat="server" method ="post">
   <div class="container">
    
     <aside>

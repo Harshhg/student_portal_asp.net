@@ -37,7 +37,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
 
 
-
+            con.Close();
 
         }
         catch (Exception ae)
